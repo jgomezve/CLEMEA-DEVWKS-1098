@@ -27,13 +27,3 @@ resource "nxos_physical_interface" "phy_iface" {
   mode                     = "access"
   depends_on               = [ nxos_bridge_domain.vlan_test ]
 }
-
-resource "nxos_physical_interface" "phy_iface_for_each" {
-  for_each                 = toset(var.interfaces_id)
-  interface_id             = "eth${each.value}"
-  access_vlan              = "vlan-${var.vlan_id}"
-  admin_state              = "up"
-  layer                    = "Layer2"
-  mode                     = "access"
-  depends_on               = [ nxos_bridge_domain.vlan_test ]
-}

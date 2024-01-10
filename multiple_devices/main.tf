@@ -21,9 +21,9 @@ provider "nxos" {
   }]
 }
 
-resource "nxos_bridge_domain" "vlan_mgmt" {
+resource "nxos_bridge_domain" "vlan_production" {
   for_each     = toset(["SW1", "SW2"])
-  fabric_encap = "vlan-11"
-  name         = "TEST_VLAN"
+  fabric_encap = "vlan-100"
+  name         = "Production_VLAN"
   device       = each.value
 }
