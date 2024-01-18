@@ -1,8 +1,10 @@
 variable "acl_name" {
-  type = string
+  description = "Access-list name."
+  type        = string
 }
 
 variable "entries" {
+  description = "Access-list entries."
   type = list(object({
     sequence_number    = number
     protocol           = string
