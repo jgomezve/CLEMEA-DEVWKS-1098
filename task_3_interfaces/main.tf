@@ -19,11 +19,11 @@ resource "nxos_bridge_domain" "vlan_test" {
 }
 
 resource "nxos_physical_interface" "phy_iface" {
-  count                    = var.interface_number
-  interface_id             = "eth1/2${count.index}"
-  access_vlan              = "vlan-${var.vlan_id}"
-  admin_state              = "up"
-  layer                    = "Layer2"
-  mode                     = "access"
-  depends_on               = [ nxos_bridge_domain.vlan_test ]
+  count        = var.interface_number
+  interface_id = "eth1/2${count.index}"
+  access_vlan  = "vlan-${var.vlan_id}"
+  admin_state  = "up"
+  layer        = "Layer2"
+  mode         = "access"
+  depends_on   = [nxos_bridge_domain.vlan_test]
 }

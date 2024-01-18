@@ -19,33 +19,33 @@ resource "nxos_feature_ospf" "ospf" {
 }
 
 module "instance_a" {
-  source     = "./modules/ospf"
-  name       = "OSPF_A"
+  source = "./modules/ospf"
+  name   = "OSPF_A"
   interfaces = [
     {
-      id = "eth1/1"
+      id   = "eth1/1"
       area = "0.0.0.0"
     },
     {
-      id = "eth1/2"
+      id   = "eth1/2"
       area = "0.0.0.1"
     }
   ]
-  depends_on = [ nxos_feature_ospf.ospf ]
+  depends_on = [nxos_feature_ospf.ospf]
 }
 
 module "instance_b" {
-  source     = "./modules/ospf"
-  name       = "OSPF_B"
+  source = "./modules/ospf"
+  name   = "OSPF_B"
   interfaces = [
     {
-      id = "eth1/3"
+      id   = "eth1/3"
       area = "0.0.0.0"
     },
     {
-      id = "eth1/4"
+      id   = "eth1/4"
       area = "0.0.0.1"
     }
   ]
-  depends_on = [ nxos_feature_ospf.ospf ]
+  depends_on = [nxos_feature_ospf.ospf]
 }

@@ -9,7 +9,7 @@ variable "vrf" {
 
 variable "interfaces" {
   type = list(object({
-    id   =  string
+    id   = string
     area = string
   }))
 }
