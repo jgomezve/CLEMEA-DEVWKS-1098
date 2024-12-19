@@ -2,7 +2,7 @@ terraform {
   required_providers {
     nxos = {
       source  = "CiscoDevNet/nxos"
-      version = ">=0.4.2"
+      version = ">=0.5.2"
     }
   }
 }
