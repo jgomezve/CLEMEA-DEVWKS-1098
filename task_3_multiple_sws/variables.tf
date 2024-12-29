@@ -1,13 +1,13 @@
 variable "vlan_name" {
-  default = "Management_VLAN"
+  default = "Secure_VLAN"
 }
 
 variable "vlan_id" {
-  default = 10
+  default = 20
 }
 
 variable "interface_id" {
-  default = "1/10"
+  default = "1/11"
 }
 
 variable "devices_info" {
