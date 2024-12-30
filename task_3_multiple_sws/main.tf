@@ -11,5 +11,5 @@ terraform {
 provider "nxos" {
   username = "cisco"
   password = "cisco"
-  devices = var.devices
+  devices = var.devices_info
 }

@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "nxos" {
-  username = "admin"
-  password = "cisco.123"
-  url      = "https://10.122.18.82"
+  username = "cisco"
+  password = "cisco"
+  url      = "https://198.18.1.100"
 }
