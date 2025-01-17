@@ -1,4 +1,4 @@
 sequence_number,protocol,action,source_prefix,source_mask,destination_prefix,destination_mask
-10,ip,permit,10.1.1.0,24,192.168.0.0,16
-20,ip,permit,10.1.3.0,24,192.168.0.0,16
-50,ip,permit,10.1.5.0,24,192.168.0.0,16
+100,ip,permit,172.18.90.0,24,10.1.0.0,16
+110,ip,permit,172.18.91.0,24,10.1.0.0,16
+120,ip,permit,172.18.92.0,24,10.1.0.0,16

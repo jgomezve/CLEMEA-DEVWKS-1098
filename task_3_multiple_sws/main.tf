@@ -10,5 +10,14 @@ terraform {
 provider "nxos" {
   username = "cisco"
   password = "cisco"
-  devices = var.devices_info
+  devices = [
+    {
+      name = "SW1"
+      url  = "https://198.18.1.100"
+    },
+    {
+      name = "SW2"
+      url  = "https://198.18.1.101"
+    }
+  ]
 }

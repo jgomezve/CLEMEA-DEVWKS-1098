@@ -13,9 +13,6 @@ provider "nxos" {
   url      = "https://198.18.1.100"
 }
 
-locals {
-  csv_data = csvdecode(file("acl.csv"))
-}
 resource "nxos_ipv4_access_list" "acl" {
   name = "CSV_ACL"
 }
