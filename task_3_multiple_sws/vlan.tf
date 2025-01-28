@@ -12,5 +12,6 @@ resource "nxos_physical_interface" "phy_iface" {
   admin_state  = "up"
   layer        = "Layer2"
   mode         = "access"
+  device       = each.value 
   depends_on   = [nxos_bridge_domain.vlan_production]
 }
